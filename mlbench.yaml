@@ -50,9 +50,9 @@
   metric: AUC
 
 - name: mlbench-PredictExcitement-FG2
-  train_dataset: MLbench/PredictExcitement/DataFG1/PredictExcitement_train_FG2.csv
+  train_dataset: MLbench/PredictExcitement/DataFG2/PredictExcitement_train_FG2.csv
   target_name: is_exciting_20
-  test_dataset: MLbench/PredictExcitement/DataFG1/PredictExcitement_test_FG2.csv
+  test_dataset: MLbench/PredictExcitement/DataFG2/PredictExcitement_test_FG2.csv
   test_prediction_id_dataset: MLbench/PredictExcitement/projectid.csv
-  test_prediction_column_name: is_exciting_20
+  test_prediction_column_name: is_exciting
   metric: AUC
