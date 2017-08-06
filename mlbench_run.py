@@ -135,9 +135,12 @@ def get_best_autopilot_models(dr_project):
 
     logger.info('DataRobot: Retrieving leaderboard...')
     metric = dr_project.metric
+    is_cv_run = len([model for model in dr_project.get_models() if model.metrics[metric]['crossValidation']])
+    evaluation_set = 'crossValidation' if is_cv_run else 'validation'
+
     leaderboard = sorted(
-        [model for model in dr_project.get_models() if model.metrics[metric]['crossValidation']],
-        key=lambda m: m.metrics[metric]['crossValidation'],
+        [model for model in dr_project.get_models() if model.metrics[metric][evaluation_set]],
+        key=lambda m: m.metrics[metric][evaluation_set],
         reverse=metric in ['AUC', 'Gini Norm'],
     )
     best_solo_model = next(model for model in leaderboard if model.model_category != 'blend')
