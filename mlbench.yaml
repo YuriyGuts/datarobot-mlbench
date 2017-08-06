@@ -1,0 +1,58 @@
+# List of metadata for mlbench datasets
+# https://arxiv.org/abs/1707.09562
+
+- name: mlbench-EverGreen
+  train_dataset: MLbench/EverGreen/EverGreen_train.csv
+  target_name: Label
+  test_dataset: MLbench/EverGreen/EverGreen_test.csv
+  test_prediction_id_dataset: MLbench/EverGreen/urlid.csv
+  test_prediction_column_name: label
+  metric: AUC
+
+- name: mlbench-VirusPrediction
+  train_dataset: MLbench/VirusPrediction/VirusPrediction_train.csv
+  target_name: WnvPresent
+  test_dataset: MLbench/VirusPrediction/VirusPrediction_test.csv
+  test_prediction_id_dataset: MLbench/VirusPrediction/id.csv
+  test_prediction_column_name: WnvPresent
+  metric: AUC
+
+- name: mlbench-Amazon
+  train_dataset: MLbench/Amazon/Amazon_train.csv
+  target_name: label
+  test_dataset: MLbench/Amazon/Amazon_test.csv
+  test_prediction_id_dataset: MLbench/Amazon/id.csv
+  test_prediction_column_name: Action
+  metric: AUC
+
+- name: mlbench-Schizophrenia
+  train_dataset: MLbench/Schizophrenia/Schizophrenia_train_upsampled.csv
+  target_name: Class
+  test_dataset: MLbench/Schizophrenia/Schizophrenia_test.csv
+  test_prediction_id_dataset: MLbench/Schizophrenia/test_id.csv
+  test_prediction_column_name: Probability
+  metric: AUC
+
+- name: mlbench-Physics
+  train_dataset: MLbench/Physics/Physics_train.csv
+  target_name: signal
+  test_dataset: MLbench/Physics/Physics_test.csv
+  test_prediction_id_dataset: MLbench/Physics/id.csv
+  test_prediction_column_name: prediction
+  metric: AUC
+
+- name: mlbench-PredictExcitement-FG1
+  train_dataset: MLbench/PredictExcitement/DataFG1/PredictExcitement_train_FG1.csv
+  target_name: is_exciting
+  test_dataset: MLbench/PredictExcitement/DataFG1/PredictExcitement_test_FG1.csv
+  test_prediction_id_dataset: MLbench/PredictExcitement/projectid.csv
+  test_prediction_column_name: is_exciting
+  metric: AUC
+
+- name: mlbench-PredictExcitement-FG2
+  train_dataset: MLbench/PredictExcitement/DataFG1/PredictExcitement_train_FG2.csv
+  target_name: is_exciting_20
+  test_dataset: MLbench/PredictExcitement/DataFG1/PredictExcitement_test_FG2.csv
+  test_prediction_id_dataset: MLbench/PredictExcitement/projectid.csv
+  test_prediction_column_name: is_exciting_20
+  metric: AUC
